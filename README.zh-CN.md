@@ -10,11 +10,13 @@
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![Cite](https://img.shields.io/badge/Cite-CITATION.cff-green.svg)](CITATION.cff)
 
+### ▶︎ [**在线样本墙 —— 12 张真实渲染页：taste.hxalex.com**](https://taste.hxalex.com)
+
 > 一套可移植的「审美操作系统 + 风格种子库」，让 Claude Code / Codex / OpenClaw / pi / workbuddy / codebuddy / Trae / Qoder / hermas 等任何智能体，在视觉创作上摆脱"AI 味默认审美"。
 > 来源：《艺术风格百科大全》（24 章 250+ 艺术家/风格）→ 提炼为可执行的审美决策体系。
 > 版本：**v3.0.0** · 2026-10-24（再许可为 CC BY 4.0）· 旧名 `agent-taste-seed-system`
 > 本仓库：**https://github.com/hhx465453939/agent-taste-seed-system**
-> 🖼️ **先看结果：[十二风格样本墙](demos/index.html)**（12 个真实渲染页面，每种风格附纪律说明）
+> 🖼️ **样本墙源码**：[`demos/index.html`](demos/index.html)，每页都附带自己的纪律说明。
 >
 > **许可**：文本资产 **CC BY 4.0** · 代码资产 **MIT** · 字体 **OFL / Apache-2.0**（[许可总览](LICENSE)）
 > **商用**：内容与代码均可商用 —— CC BY 4.0 没有非商业条款，保留署名即可

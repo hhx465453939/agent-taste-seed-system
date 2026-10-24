@@ -10,13 +10,15 @@
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![Cite](https://img.shields.io/badge/Cite-CITATION.cff-green.svg)](CITATION.cff)
 
+### ▶︎ [**Live gallery — 12 real rendered pages: taste.hxalex.com**](https://taste.hxalex.com)
+
 > A portable **aesthetic operating system** and **art-style seed library** for AI agents — Claude Code, Codex, OpenClaw, pi, workbuddy, codebuddy, Trae, Qoder, hermas, or anything else that can read files.
 > It fixes the one thing nearly every model gets wrong: the **default AI aesthetic** — centred headline, three evenly spaced cards, purple gradient, generic rounded corners.
 > **Instead of adjectives, it gives the agent 250+ artists and style movements** distilled into five gene loci (colour × light × brushwork × composition × emotion), plus **executable parameters** (CSS variables, prompt keywords, layout rules) and **pixel-level assertions** that make "taste" regression-testable.
 > Source: *Encyclopedia of Art Styles* (24 chapters, 250+ artists/styles) reworked into an executable decision system.
 > Version **v3.0.0** · 2026-10-24 · formerly `agent-taste-seed-system`
 > Repository: **https://github.com/hhx465453939/agent-taste-seed-system**
-> 🖼️ **See the output first: [the twelve-style gallery](demos/index.html)** — 12 real rendered pages, each with its discipline notes.
+> 🖼️ **Gallery source**: [`demos/index.html`](demos/index.html) — every page ships with its own discipline notes.
 >
 > **License**: text assets **CC BY 4.0** · code assets **MIT** · fonts **OFL / Apache-2.0** ([license overview](LICENSE))
 > **Commercial use**: allowed for content and code alike — CC BY 4.0 has no NonCommercial clause; just keep the attribution
