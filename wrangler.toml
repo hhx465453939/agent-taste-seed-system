@@ -1,0 +1,7 @@
+# Cloudflare Workers 静态站部署配置 —— 部署命令：npx wrangler deploy
+# 站点根 = demos/（demos/.assetsignore 排除 _src/ 与 README.md，只发静态产物）
+name = "aesthetic-brain"
+compatibility_date = "2026-10-24"
+
+[assets]
+directory = "demos"

@@ -59,19 +59,28 @@ fi
 # ── 4. 外部媒体外链 ──────────────────────────────────────────────
 # 演示页必须完全自包含（离线可复现）；引外站图片会同时带来可用性与授权风险。
 #
-# ⚠️ 徽章服务豁免：shields.io / badgen.net 这类徽章**由文本参数生成**，
-#    不含任何第三方作品图像，是开源项目 README 的标准做法
-#    （否则每个项目的徽章都会把自己的 CI 卡死）。
-#    白名单只放徽章/覆盖率服务，不放任何图库或 CDN。
+# ⚠️ 两类豁免（共同前提：不含任何第三方作品图像）：
+#    1. 徽章服务：shields.io / badgen.net 这类徽章**由文本参数生成**，
+#       不含任何第三方作品图像，是开源项目 README 的标准做法
+#       （否则每个项目的徽章都会把自己的 CI 卡死）。
+#    2. 本项目自有部署域 `taste.hxalex.com`：它只是把 demos/_assets/shots/
+#       原样搬到线上（**同源内容**，不是第三方素材），用于 og:image 与分享缩略图。
+#       注意：豁免的是「本仓库自己的产物在公网上的绝对地址」，
+#       不是「可以随便引外链」——仓库内仍禁止引用任何外部图床或 CDN。
+#
+# 新增豁免的三条约束（防止这条规则被慢慢拉松）：
+#   a. 必须精确到完整域名，**不许写成通配**（例：禁止 *.hxalex.com）；
+#   b. 豁免源必须能追溯到本仓库的产物（自托管、同源）；
+#   c. 变更要在提交说明里写清「旧规则为什么不够、新规则为什么仍安全」。
 head_ "4. 外部媒体外链"
 EXTLINK=$(grep -rnoE 'https?://[^"'"'"' )>]+\.(png|jpg|jpeg|gif|webp|svg|mp4)' \
   --include='*.html' --include='*.md' --include='*.css' . 2>/dev/null \
-  | grep -vE 'shields\.io|badgen\.net|badge\.fury\.io|codecov\.io|coveralls\.io|api\.netlify\.com|/actions/workflows/.*/badge\.svg' || true)
+  | grep -vE 'shields\.io|badgen\.net|badge\.fury\.io|codecov\.io|coveralls\.io|api\.netlify\.com|/actions/workflows/.*/badge\.svg|//taste\.hxalex\.com/' || true)
 if [ -n "$EXTLINK" ]; then
-  bad "发现外部媒体引用（应改为本地资产；徽章服务除外）："
+  bad "发现外部媒体引用（应改为本地资产；徽章服务与本项目自有域除外）："
   printf '      %s\n' "$EXTLINK"
 else
-  ok "无外部媒体引用（演示页自包含；shields.io 等文本生成的徽章已豁免）"
+  ok "无外部媒体引用（演示页自包含；徽章服务与本项目自有域 taste.hxalex.com 已豁免）"
 fi
 
 # ── 5. 敏感信息（路径 / 主机 / 凭据） ─────────────────────────────
