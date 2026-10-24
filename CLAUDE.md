@@ -34,7 +34,8 @@ $env:PYTHONIOENCODING = "utf-8"
 | 改门面文档 | 先跑一遍六道闸门建立基线 → 改 → 再跑一遍；双语事实变更按 AGENTS.md §1.3 两侧同步 |
 | 改种子库 | 改源文件 → `seedbrain build --profile profiles/taste.json` → 提交 `SEED-INDEX.md` + `seed-index.jsonl` → 跑闸门 |
 | 改演示页文本 | 改 HTML → `build_fonts.py` → `render_shots.py` → `qa_layout.py` + `qa_style.py` |
-| 改许可素材 | 改 `scripts/build_license.py` 或 `scripts/license-sources/` → `py scripts/build_license.py` → `check_integrity.py` |
+| 改许可 | 四处同改（AGENTS.md §3.3：素材 / `build_license.py` / `check_integrity.py` / `check_assets.sh`）→ `py scripts/build_license.py` → 六道闸门 |
+| 发版 | 五处版本号同步（AGENTS.md §3.1）→ 六道闸门 → `git push origin main` → `gh release create vX.Y.Z --target main` |
 | 新增英文文档 | 放 `docs/en/`，相对链接比中文版多一层（`../x` → `../../x`）→ `check_links.py` |
 
 ## 不要做
@@ -45,6 +46,8 @@ $env:PYTHONIOENCODING = "utf-8"
 4. **不要把种子库翻成英文** —— AGENTS.md §1.2 的硬约束。
 5. **不要用 bash 重定向或 heredoc 写文件** —— 用编辑工具，否则编码与行尾会把中文写坏。
 6. **不要提交 `sources/`、`__pycache__`、`node_modules`、任何第三方图片或 PDF**。
+7. **不要只改一处版本号就发版** —— 五处（AGENTS.md §3.1）**没有自动断言**，靠人逐条 grep 核对。
+8. **不要为了「宣传」往仓库里塞截图或统计数据** —— 演示页只放真实渲染结果，见 AGENTS.md §5 内容红线。
 
 ## 双语相关的两个易错点
 

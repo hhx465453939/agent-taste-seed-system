@@ -151,6 +151,59 @@ scope: 受影响的模块名，如 i18n / seed-brain / license / demos / ci
 - 一个提交只做一件事。翻译门面与修闸门不要混在一起。
 - 用户可见的变更必须同步更新 `CHANGELOG.md`（中文）。
 
+### 3.1 版本号出现在 5 处（本仓库没有 pyproject）
+
+本仓库**不发包**，所以没有 `pyproject.toml`，版本号只活在文档与元数据里。
+发版时必须**五处同时改**，缺一处就是对外不一致：
+
+| 位置 | 字段 | 谁读它 |
+|---|---|---|
+| `CITATION.cff` | `version:` + `date-released:` | GitHub 的 Cite this repository、学术引用 |
+| `README.md` | `> Version **vX.Y.Z** · YYYY-MM-DD` | 英文门面第一屏 |
+| `README.zh-CN.md` | `> 版本：**vX.Y.Z** · YYYY-MM-DD` | 中文门面第一屏 |
+| `CHANGELOG.md` | `## vX.Y.Z · YYYY-MM-DD` | 人读；Release notes 的来源 |
+| `AGENTS.md` 本节 | 最近发布记录 | 维护者与 agent 读的现状 |
+
+自检（四条必须同号）：
+
+```bash
+grep -m1 '^version:' CITATION.cff
+grep -m1 'Version \*\*v' README.md
+grep -m1 '版本：\*\*v' README.zh-CN.md
+grep -m1 '^## v' CHANGELOG.md
+```
+
+### 3.2 发布：手动建 GitHub Release（无 PyPI、无 release.yml）
+
+```bash
+# 1. 五处版本号同步（§3.1），六道闸门全绿（§4）
+# 2. 提交并推送
+git push origin main
+# 3. 建 Release（在当前 main HEAD 打 tag）
+gh release create vX.Y.Z --title "..." --notes-file <notes> --target main
+```
+
+- tag 命名 `vX.Y.Z`，与 `CITATION.cff` 的 `version` 一致（**没有自动断言**，靠人工核对）；
+- Release notes 必须写清：许可/行为变化、迁移边界、闸门结果；
+- 已发布的 tag / Release **不改写**（历史许可不可撤销）。
+
+### 3.3 许可治理：改许可要同时动四处
+
+`LICENSE` 是 `scripts/build_license.py` 的产物，**永远不手改**。改许可时的完整耦合面：
+
+| 文件 | 改什么 |
+|---|---|
+| `scripts/license-sources/*.txt` | 官方正文原文（逐字），来源与抓取日期登记在同目录 `README.md` |
+| `scripts/build_license.py` | §零/§一/§三/§五 的说明文字、`SPDX` 行、`read_source()` 的文件名 |
+| `scripts/check_integrity.py` | `LEGAL_FILES` 清单；`check_chapter_headers` 的断言字符串 |
+| `scripts/check_assets.sh` | 第 6 节「三份官方正文必须在场」的清单 |
+
+然后 `py scripts/build_license.py` 重生成 `LICENSE`，再跑六道闸门。
+**改文件名（如 `cc-by-nc-sa-*` → `cc-by-4.0-*`）会同时命中这四处**，改漏一处闸门就红。
+
+当前许可：内容 **CC BY 4.0** · 代码 MIT · 字体上游 OFL/Apache。
+v3.0.0（2026-10-24）起为 CC BY 4.0；**v2.x 及更早为 CC BY-NC-SA 4.0，旧版本保留原许可**。
+
 ---
 
 ## 4. 闸门纪律（全绿才算完成）
@@ -211,6 +264,16 @@ py demos/_src/check_font_licenses.py # 字体子集 OFL 命名合规
 | 种子库单语 | 刻意设计（§1.2） | 英文读者无法直接检索种子正文 |
 
 前两项如果出现实际事故，再加 `scripts/check_i18n_sync.py`：比对成对文件的结构化指纹（标题层级序列、相对链接目标集合、代码块命令集合），偏差超阈值即 fail。**在那之前不预先建空壳检查**——没有事故史的空断言只会被绕过。
+
+---
+
+## 8. 待开工（已登记，尚未进入规范）
+
+| 项 | 要点 |
+|---|---|
+| 宣传静态站 | `demos/` 的 12 张实时渲染页作为效果展示；首屏放项目信息、README 里的 agent 部署命令（GitHub 链接）、QQ 群 `1027282854` 引流；部署到 Cloudflare 子域（个人域名根下加项目名）；DNS 记录需单独配置 |
+
+> 上线后删掉本行条目——本表不是待办清单的长期居所。
 
 ---
 
