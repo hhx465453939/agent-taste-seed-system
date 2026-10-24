@@ -21,3 +21,17 @@ __pycache__/
 # 派生索引（SEED-INDEX.md / seed-index.jsonl）**要入库**：agent 不跑脚本也能读全景。
 # 但「谁用过什么」是本地历史，提交会让每次 pick 都产生噪声 diff。
 /references/.seed-usage.json
+
+# wrangler files
+# ⚠️ 本仓库的部署配置以 `wrangler.toml` 为准。
+# wrangler 的 autoconfig 会在没有配置时自动生成 `wrangler.jsonc`，
+# 而 **JSONC 优先级高于 TOML** ⇒ 生成一次就会静默遮蔽 wrangler.toml，
+# 把站点部署到目录名对应的 Worker（实测踩到：建出两个 Worker）。
+# 所以自动生成的 JSONC 一律不入库，以 toml 为唯一真相。
+.wrangler
+wrangler.jsonc
+wrangler.json
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
