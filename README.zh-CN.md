@@ -5,8 +5,6 @@
 
 <img src="demos/_assets/brand/readme-hero.png" width="100%" alt="美学大脑 · Aesthetic Brain —— 给任何 AI Agent 装上审美大脑">
 
-# 美学大脑 · 审美操作系统
-
 <p align="center">
   <a href="https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml"><img src="https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" alt="许可：CC BY 4.0"></a>
