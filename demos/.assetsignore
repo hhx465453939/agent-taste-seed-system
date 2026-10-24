@@ -1,0 +1,4 @@
+# Cloudflare Pages 部署忽略清单（只影响部署产物，不影响仓库）
+# 站点对外只该有：12 张示例页 + index + _assets（截图与字体子集）
+_src/
+README.md

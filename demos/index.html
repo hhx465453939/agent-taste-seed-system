@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>美学大脑 · 风格样本墙 — agent-taste-seed-system</title>
+<title>美学大脑 · 给任何 AI Agent 装上审美大脑 — 风格样本墙</title>
+<meta name="description" content="一套可移植的「审美操作系统 + 风格种子库」：374 粒种子、250+ 艺术家、24 章风格史，把品味拆成五个基因位，让 AI Agent 先做审美决策再产出。附十二张实时渲染的样本墙。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="美学大脑 · 给任何 AI Agent 装上审美大脑">
+<meta property="og:description" content="374 粒风格种子 + 24 章风格史 + 12 张可复现的实时渲染样本。装进 Claude Code / Codex / OpenClaw 只需一条指令。">
 <link rel="stylesheet" href="_assets/taste-fonts.css">
 <style>
 /* ─────────────────────────────────────────────────────────────
@@ -105,12 +109,82 @@ pre i{color:var(--bone-3);font-style:normal}
 .foot-note{margin-top:34px;padding-top:22px;border-top:1px solid var(--hair);
   font-family:var(--mono);font-size:10.5px;line-height:2;letter-spacing:.1em;color:var(--bone-3)}
 .foot-note b{color:var(--accent);font-weight:400}
+/* ── 落地页：定位、行动区、安装区（沿用本页同一套设计语言）── */
+.what{margin-top:30px;max-width:1100px;font-family:var(--serif);
+  font-size:25px;line-height:1.72;color:var(--bone)}
+.what b{color:var(--accent);font-weight:700}
+.meta{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap;font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.13em;color:var(--bone-2)}
+.meta span{border:1px solid var(--hair-strong);padding:6px 12px;border-radius:999px}
+.meta span b{color:var(--accent);font-weight:400}
+
+.acts{margin-top:42px;display:flex;gap:12px;flex-wrap:wrap;align-items:stretch}
+.act{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:var(--bone);
+  border:1px solid var(--hair-strong);padding:15px 21px;font-size:13.5px;letter-spacing:.04em;
+  transition:border-color .25s,background .25s}
+.act:hover{border-color:rgba(217,160,91,.55);background:rgba(217,160,91,.07)}
+.act b{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--accent);
+  text-transform:uppercase;font-weight:400}
+.act.primary{border-color:rgba(217,160,91,.55);background:rgba(217,160,91,.09)}
+
+.install{padding:72px 0 18px;border-top:1px solid var(--hair-strong)}
+.ins-hd{display:flex;justify-content:space-between;align-items:baseline;gap:24px;
+  padding-bottom:16px;border-bottom:1px solid var(--hair)}
+.ins-hd h2{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:.06em}
+.ins-hd span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--bone-3);
+  text-align:right}
+.agents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:40px}
+.agent{border:1px solid var(--hair);background:var(--wall-2);padding:24px 22px 22px;min-width:0}
+.agent h3{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.04em}
+.agent .root{margin-top:9px;font-family:var(--mono);font-size:10px;letter-spacing:.04em;
+  color:var(--bone-3);word-break:break-all;line-height:1.7}
+.agent pre{margin-top:16px;font-size:11px;line-height:1.85;padding:14px 14px;
+  white-space:pre-wrap;overflow-wrap:anywhere}
+.ins-note{margin-top:28px;padding:20px 22px;border-left:2px solid var(--accent);
+  background:rgba(217,160,91,.06);font-size:13px;line-height:1.95;color:#b6b2ab}
+.ins-note b{color:var(--bone);font-weight:600}
+.qq{margin-top:32px;padding-top:24px;border-top:1px solid var(--hair);
+  display:flex;gap:26px;align-items:baseline;flex-wrap:wrap}
+.qq .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--bone-3);
+  text-transform:uppercase}
+.qq .v{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--accent);letter-spacing:.05em}
+.qq p{font-size:13px;line-height:1.9;color:#a8a49d}
+.qq a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(217,160,91,.35)}
+
 @media (max-width:1100px){
   .wrap{padding:0 26px}
   .grid{grid-template-columns:1fr}
   .credits{grid-template-columns:repeat(2,1fr)}
-  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-grid{grid-template-columns:minmax(0,1fr);gap:44px}
+  .foot-grid>div{min-width:0}
+  .agents{grid-template-columns:minmax(0,1fr);gap:22px}
+  .ins-hd{flex-direction:column;align-items:flex-start;gap:8px}
+  .ins-hd span{text-align:left}
+  .what{font-size:19px}
   h1{font-size:52px}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere}
+}
+
+/* 手机端：手机 QQ 是主要入口，不能让它横向滚动 */
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  header{padding-top:56px}
+  h1{font-size:33px;line-height:1.24}
+  h1 small{font-size:11px;letter-spacing:.2em;margin-top:14px}
+  .what{font-size:16.5px;line-height:1.8}
+  .lede{font-size:14px;line-height:1.95}
+  .meta{font-size:9.5px;gap:6px}
+  .meta span{padding:5px 9px}
+  .acts{gap:9px}
+  .act{padding:12px 14px;font-size:12px;flex:1 1 auto;justify-content:center}
+  .credits{grid-template-columns:1fr}
+  .credits div{padding:18px 0 20px}
+  .wall{padding:52px 0 24px}
+  .wall-hd{flex-direction:column;align-items:flex-start;gap:8px}
+  .agent pre{font-size:10px}
+  .qq{gap:8px}
+  .qq .v{font-size:24px}
+  footer{padding:40px 0 64px}
 }
 </style>
 </head>
@@ -128,6 +202,16 @@ pre i{color:var(--bone-3);font-style:normal}
     <small>十二张作品 · 十二套审美纪律 · 一次实时渲染</small>
   </h1>
 
+  <p class="what">
+    一套可移植的<b>「审美操作系统 + 风格种子库」</b>——把「品味」拆成五个基因位，
+    让任何 AI Agent 先做审美决策，再产出东西，而不是落到默认的「AI 味」。
+  </p>
+  <p class="meta">
+    <span>v3.0.0</span><span><b>374</b> 粒种子</span><span><b>250+</b> 艺术家</span>
+    <span><b>24</b> 章风格史</span><span><b>12</b> 张代码基因卡</span><span><b>10</b> 份情绪档</span>
+    <span>内容 <b>CC BY 4.0</b></span><span>代码 <b>MIT</b></span>
+  </p>
+
   <p class="lede">
     下面每一张，都是真实浏览器里渲染出来的完整页面（不是设计稿、不是文生图），
     尺寸 <b>1440 × 900</b>，以 <b>2 倍设备像素比</b>截取，因此是 2880 × 1800 的高清图。
@@ -135,6 +219,12 @@ pre i{color:var(--bone-3);font-style:normal}
     并把它拆成 <code>色彩 / 光线 / 笔触 / 构图 / 情绪</code> 五个基因位落成具体参数。
     <br>每一张的视觉纪律，都由程序断言，不是靠"看着还行"。
   </p>
+
+  <div class="acts">
+    <a class="act primary" href="#install"><b>Install</b> 装到自己机器</a>
+    <a class="act" href="https://github.com/hhx465453939/agent-taste-seed-system"><b>GitHub</b> 源码与文档</a>
+    <a class="act" href="#qq"><b>QQ</b> 群 1027282854</a>
+  </div>
 
   <dl class="credits">
     <div><dt>谁来做的</dt><dd><b>pi agent</b><span>终端里的编码智能体</span></dd></div>
@@ -344,6 +434,57 @@ pre i{color:var(--bone-3);font-style:normal}
       </figcaption>
     </figure>
 
+  </div>
+</section>
+
+<section class="install" id="install">
+  <div class="ins-hd">
+    <h2>装到自己的 Agent 上 ／ 一条指令</h2>
+    <span>把指令整段发给你的 agent，它会自己装完并回报</span>
+  </div>
+
+  <div class="agents">
+    <div class="agent">
+      <h3>Claude Code</h3>
+      <div class="root">~/.claude/skills/taste/references/</div>
+      <pre>git clone https://github.com/hhx465453939/agent-taste-seed-system.git
+bash ~/agent-taste-seed-system/deploy/install-claude-skill.sh
+<i># 再把 deploy/claude-code.md 里的注入段
+# 追加到 ~/.claude/CLAUDE.md 末尾</i></pre>
+    </div>
+
+    <div class="agent">
+      <h3>Codex</h3>
+      <div class="root">~/.codex/skills/taste/references/</div>
+      <pre>git clone https://github.com/hhx465453939/agent-taste-seed-system.git
+mkdir -p ~/.codex/skills/taste/references
+cp -R ~/agent-taste-seed-system/references/. \
+      ~/.codex/skills/taste/references/
+<i># 注入段见 deploy/generic-agents.md</i></pre>
+    </div>
+
+    <div class="agent">
+      <h3>OpenClaw</h3>
+      <div class="root">&lt;workspace&gt;/skills/taste/references/</div>
+      <pre>git clone https://github.com/hhx465453939/agent-taste-seed-system.git
+mkdir -p skills/taste/references
+cp -R ~/agent-taste-seed-system/references/. \
+      skills/taste/references/
+<i># 注入段见 deploy/openclaw.md</i></pre>
+    </div>
+  </div>
+
+  <p class="ins-note">
+    <b>一条硬规则</b>：种子库必须装进 agent 自己的 <b>skill 目录</b>，不要放 workspace 根目录，
+    也不要放 workspace 下的普通子目录。很多 agent 宿主会自动清理 workspace（搬到 archive 或直接删），
+    路径一断就是静默失效——它每次「查库」都查不到，然后退回默认审美，还不报错。
+  </p>
+
+  <div class="qq" id="qq">
+    <span class="k">QQ 群</span>
+    <span class="v">1027282854</span>
+    <p>装完想抄现成搭配、想看别人怎么用、或者发现某粒种子不好用，进群说一声就行。<br>
+       源码与完整文档：<a href="https://github.com/hhx465453939/agent-taste-seed-system">github.com/hhx465453939/agent-taste-seed-system</a></p>
   </div>
 </section>
 
