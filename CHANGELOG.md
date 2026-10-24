@@ -13,6 +13,9 @@
   （`1fr` 的 min-content 会被长命令撑破），长命令 `pre` 允许换行，新增 `≤640px` 断点。
   实测 320–1600px 均无横向溢出（手机 QQ 是主要入口，不能横向滚动）。
 - `demos/.assetsignore`：部署时排除 `_src/` 与 `README.md`，站点只留静态产物。
+- 双语 README 首屏新增一行醒目的在线样本墙链接（`taste.hxalex.com`）：
+  原来指向 `demos/index.html` 的相对链接在 GitHub 上点开只能看到 HTML 源码，
+  不是渲染后的页面；现在该行改为指向**源码**，线上入口独立提出。
 
 ## v3.0.0 · 2026-10-24
 
