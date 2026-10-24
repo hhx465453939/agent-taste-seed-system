@@ -3,29 +3,32 @@
   <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/README-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-e05252?style=flat-square" alt="简体中文"></a>
 </p>
 
-# 🎨 美学大脑 / aesthetic-brain — 给任何 AI Agent 装上审美大脑
+<img src="demos/_assets/brand/readme-hero.png" width="100%" alt="美学大脑 · Aesthetic Brain —— 给任何 AI Agent 装上审美大脑">
 
-[![CI](https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml/badge.svg)](https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml)
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
-[![Cite](https://img.shields.io/badge/Cite-CITATION.cff-green.svg)](CITATION.cff)
+# 美学大脑 · 审美操作系统
+
+<p align="center">
+  <a href="https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml"><img src="https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" alt="许可：CC BY 4.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-blue.svg" alt="代码：MIT"></a>
+  <a href="CITATION.cff"><img src="https://img.shields.io/badge/Cite-CITATION.cff-green.svg" alt="引用"></a>
+</p>
 
 ### ▶︎ [**在线样本墙 —— 12 张真实渲染页：taste.hxalex.com**](https://taste.hxalex.com)
 
-> 一套可移植的「审美操作系统 + 风格种子库」，让 Claude Code / Codex / OpenClaw / pi / workbuddy / codebuddy / Trae / Qoder / hermas 等任何智能体，在视觉创作上摆脱"AI 味默认审美"。
-> 来源：《艺术风格百科大全》（24 章 250+ 艺术家/风格）→ 提炼为可执行的审美决策体系。
-> 版本：**v3.0.0** · 2026-10-24（再许可为 CC BY 4.0）· 旧名 `agent-taste-seed-system`
-> 本仓库：**https://github.com/hhx465453939/agent-taste-seed-system**
-> 🖼️ **样本墙源码**：[`demos/index.html`](demos/index.html)，每页都附带自己的纪律说明。
->
-> **许可**：文本资产 **CC BY 4.0** · 代码资产 **MIT** · 字体 **OFL / Apache-2.0**（[许可总览](LICENSE)）
-> **商用**：内容与代码均可商用 —— CC BY 4.0 没有非商业条款，保留署名即可
+一套可移植的**「审美操作系统 + 风格种子库」**，让 Claude Code / Codex / OpenClaw / pi / workbuddy / codebuddy / Trae / Qoder / hermas 等任何能读文件的 agent，在视觉创作上摆脱**「AI 味默认审美」**。
+
+它修的是几乎所有模型都会犯的那个错：居中的大标题、三张等距卡片、紫色渐变、无意义的圆角。
+
+**它不给你形容词，给你 250+ 艺术家和风格运动**——先拆成五个基因位（**色彩 × 光线 × 笔触 × 构图 × 情绪**），再翻译成可执行参数（CSS 变量 / 提示词关键词 / 版式规则）与像素级断言，于是「品味」第一次变成可以回归测试的东西。
+
+<sub>**v3.0.0** · 2026-10-24（再许可为 CC BY 4.0）· 旧名 `agent-taste-seed-system` · [仓库](https://github.com/hhx465453939/agent-taste-seed-system) · [许可](LICENSE)：文本 **CC BY 4.0** / 代码 **MIT** / 字体 **OFL–Apache** —— 可商用，无 NonCommercial 条款。<br>来源：《艺术风格百科大全》（24 章 250+ 艺术家/风格）→ 提炼为可执行的审美决策体系 · 样本墙源码：[`demos/index.html`](demos/index.html)</sub>
 
 <p align="center">
-  <a href="demos/index.html"><img src="demos/_assets/shots/01-cyber-neon.webp" width="24%" alt="赛博霓虹"></a>
-  <a href="demos/index.html"><img src="demos/_assets/shots/03-cixuan-chinese-whitespace.webp" width="24%" alt="中国画留白"></a>
-  <a href="demos/index.html"><img src="demos/_assets/shots/06-baroque-tenebrism.webp" width="24%" alt="巴洛克聚光"></a>
-  <a href="demos/index.html"><img src="demos/_assets/shots/09-pop-collage.webp" width="24%" alt="波普拼贴"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/01-cyber-neon.webp" width="24%" alt="赛博霓虹"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/03-cixuan-chinese-whitespace.webp" width="24%" alt="中国画留白"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/06-baroque-tenebrism.webp" width="24%" alt="巴洛克聚光"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/09-pop-collage.webp" width="24%" alt="波普拼贴"></a>
 </p>
 
 ---

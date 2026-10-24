@@ -3,31 +3,32 @@
   <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/README-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-e05252?style=flat-square" alt="简体中文"></a>
 </p>
 
-# 🎨 Aesthetic Brain — give any AI agent a design-taste layer
+<img src="demos/_assets/brand/readme-hero.png" width="100%" alt="Aesthetic Brain · 美学大脑 —— 给任何 AI Agent 装上审美大脑">
 
-[![CI](https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml/badge.svg)](https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml)
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
-[![Cite](https://img.shields.io/badge/Cite-CITATION.cff-green.svg)](CITATION.cff)
+# Aesthetic Brain · an aesthetic operating system
+
+<p align="center">
+  <a href="https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml"><img src="https://github.com/hhx465453939/agent-taste-seed-system/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-blue.svg" alt="Code: MIT"></a>
+  <a href="CITATION.cff"><img src="https://img.shields.io/badge/Cite-CITATION.cff-green.svg" alt="Cite"></a>
+</p>
 
 ### ▶︎ [**Live gallery — 12 real rendered pages: taste.hxalex.com**](https://taste.hxalex.com)
 
-> A portable **aesthetic operating system** and **art-style seed library** for AI agents — Claude Code, Codex, OpenClaw, pi, workbuddy, codebuddy, Trae, Qoder, hermas, or anything else that can read files.
-> It fixes the one thing nearly every model gets wrong: the **default AI aesthetic** — centred headline, three evenly spaced cards, purple gradient, generic rounded corners.
-> **Instead of adjectives, it gives the agent 250+ artists and style movements** distilled into five gene loci (colour × light × brushwork × composition × emotion), plus **executable parameters** (CSS variables, prompt keywords, layout rules) and **pixel-level assertions** that make "taste" regression-testable.
-> Source: *Encyclopedia of Art Styles* (24 chapters, 250+ artists/styles) reworked into an executable decision system.
-> Version **v3.0.0** · 2026-10-24 · formerly `agent-taste-seed-system`
-> Repository: **https://github.com/hhx465453939/agent-taste-seed-system**
-> 🖼️ **Gallery source**: [`demos/index.html`](demos/index.html) — every page ships with its own discipline notes.
->
-> **License**: text assets **CC BY 4.0** · code assets **MIT** · fonts **OFL / Apache-2.0** ([license overview](LICENSE))
-> **Commercial use**: allowed for content and code alike — CC BY 4.0 has no NonCommercial clause; just keep the attribution
+A portable **aesthetic operating system** and **art-style seed library** for AI agents — Claude Code, Codex, OpenClaw, pi, workbuddy, codebuddy, Trae, Qoder, hermas, or anything else that can read files.
+
+It fixes the one thing nearly every model gets wrong: the **default AI aesthetic** — centred headline, three evenly spaced cards, purple gradient, generic rounded corners.
+
+**Instead of adjectives, it hands the agent 250+ artists and style movements**, distilled into five gene loci — **colour × light × brushwork × composition × emotion** — and then into executable parameters (CSS variables, prompt keywords, layout rules) plus pixel-level assertions that make taste regression-testable.
+
+<sub>**v3.0.0** · 2026-10-24 · formerly `agent-taste-seed-system` · [repository](https://github.com/hhx465453939/agent-taste-seed-system) · [license](LICENSE): text **CC BY 4.0** / code **MIT** / fonts **OFL–Apache** — commercial use allowed, no NonCommercial clause.<br>Source: *Encyclopedia of Art Styles* (24 chapters, 250+ artists) reworked into an executable decision system · gallery source: [`demos/index.html`](demos/index.html)</sub>
 
 <p align="center">
-  <a href="demos/index.html"><img src="demos/_assets/shots/01-cyber-neon.webp" width="24%" alt="Cyber neon"></a>
-  <a href="demos/index.html"><img src="demos/_assets/shots/03-cixuan-chinese-whitespace.webp" width="24%" alt="Chinese painting whitespace"></a>
-  <a href="demos/index.html"><img src="demos/_assets/shots/06-baroque-tenebrism.webp" width="24%" alt="Baroque tenebrism"></a>
-  <a href="demos/index.html"><img src="demos/_assets/shots/09-pop-collage.webp" width="24%" alt="Pop collage"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/01-cyber-neon.webp" width="24%" alt="Cyber neon"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/03-cixuan-chinese-whitespace.webp" width="24%" alt="Chinese painting whitespace"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/06-baroque-tenebrism.webp" width="24%" alt="Baroque tenebrism"></a>
+  <a href="https://taste.hxalex.com"><img src="demos/_assets/shots/09-pop-collage.webp" width="24%" alt="Pop collage"></a>
 </p>
 
 ---
